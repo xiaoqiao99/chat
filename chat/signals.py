@@ -9,9 +9,9 @@ channel_layer = get_channel_layer()
 
 @receiver(post_save, sender=Room)
 def my_handler(sender, instance, created, **kwargs):
-    print("-------------------------")
-    print(sender, instance, created)
+
     async_to_sync(channel_layer.group_send)(
+                # "chat_%s" % instance.id
                 "chat_lobby",
                 {
                     'type': 'chat.message',
