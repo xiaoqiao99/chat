@@ -35,7 +35,7 @@ redis==2.10.6
 requests==2.18.4
 simplejson==3.13.2
 six==1.11.0
-Twisted==18.9.0
+Twisted==22.10.0
 txaio==18.8.1
 urllib3==1.22
 zope.interface==4.6.0
